@@ -1,0 +1,8 @@
+{
+    "rust-analyzer.checkOnSave": false,
+    "rust-analyzer.cargo.target": "riscv64gc-unknown-none-elf",
+    "rust-analyzer.linkedProjects": [
+        "os/Cargo.toml",
+        "user/Cargo.toml",
+    ],
+}
