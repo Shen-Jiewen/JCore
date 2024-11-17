@@ -1,0 +1,11 @@
+/home/javen/rust_ws/JCore/os/target/debug/deps/libsemver_parser-fd52b1034c28bf08.rmeta: /home/javen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/semver-parser-0.7.0/src/lib.rs /home/javen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/semver-parser-0.7.0/src/version.rs /home/javen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/semver-parser-0.7.0/src/range.rs /home/javen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/semver-parser-0.7.0/src/common.rs /home/javen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/semver-parser-0.7.0/src/recognize.rs
+
+/home/javen/rust_ws/JCore/os/target/debug/deps/libsemver_parser-fd52b1034c28bf08.rlib: /home/javen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/semver-parser-0.7.0/src/lib.rs /home/javen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/semver-parser-0.7.0/src/version.rs /home/javen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/semver-parser-0.7.0/src/range.rs /home/javen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/semver-parser-0.7.0/src/common.rs /home/javen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/semver-parser-0.7.0/src/recognize.rs
+
+/home/javen/rust_ws/JCore/os/target/debug/deps/semver_parser-fd52b1034c28bf08.d: /home/javen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/semver-parser-0.7.0/src/lib.rs /home/javen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/semver-parser-0.7.0/src/version.rs /home/javen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/semver-parser-0.7.0/src/range.rs /home/javen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/semver-parser-0.7.0/src/common.rs /home/javen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/semver-parser-0.7.0/src/recognize.rs
+
+/home/javen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/semver-parser-0.7.0/src/lib.rs:
+/home/javen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/semver-parser-0.7.0/src/version.rs:
+/home/javen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/semver-parser-0.7.0/src/range.rs:
+/home/javen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/semver-parser-0.7.0/src/common.rs:
+/home/javen/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/semver-parser-0.7.0/src/recognize.rs:

@@ -1,0 +1,11 @@
+[package]
+name = "user_lib"
+version = "0.1.0"
+authors = ["Javen 2452731211@qq.com"]
+edition = "2021"
+
+[dependencies]
+
+
+[profile.release]
+debug = true

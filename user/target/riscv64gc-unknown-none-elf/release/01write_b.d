@@ -1,0 +1,1 @@
+/home/javen/rust_ws/JCore/user/target/riscv64gc-unknown-none-elf/release/01write_b: /home/javen/rust_ws/JCore/user/src/bin/01write_b.rs /home/javen/rust_ws/JCore/user/src/console.rs /home/javen/rust_ws/JCore/user/src/lang_items.rs /home/javen/rust_ws/JCore/user/src/lib.rs /home/javen/rust_ws/JCore/user/src/syscall.rs
