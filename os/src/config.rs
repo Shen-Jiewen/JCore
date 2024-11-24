@@ -20,3 +20,5 @@ pub const APP_BASE_ADDRESS: usize = 0x80400000;
 /// 应用程序大小限制（以字节为单位）
 /// 单个应用程序的最大大小限制为 128 KB（0x20000 字节）。
 pub const APP_SIZE_LIMIT: usize = 0x20000;
+
+pub use crate::board::CLOCK_FREQ;

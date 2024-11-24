@@ -16,6 +16,10 @@
 #![no_std]
 
 use core::arch::global_asm;
+
+#[path ="boards/qemu.rs"]
+mod board;
+
 #[macro_use]
 mod console;
 pub mod config;
@@ -26,6 +30,7 @@ mod syscall;
 mod trap;
 mod task;
 mod loader;
+mod timer;
 
 global_asm!(include_str!("entry.asm"));
 global_asm!(include_str!("link_app.S"));
@@ -42,13 +47,15 @@ fn clear_bss() {
     }
 }
 
-/// the rust entry-point of os
+/// JCore 操作系统的入口函数
 #[no_mangle]
 pub fn rust_main() -> ! {
     clear_bss();
     println!("[kernel] Hello, world!");
     trap::init();
     loader::load_apps();
+    trap::enable_timer_interrupt();
+    timer::set_next_trigger();
     task::run_first_task();
     panic!("Unreachable in rust_main!");
 }

@@ -3,6 +3,7 @@ use core::arch::asm;
 const SYSCALL_WRITE: usize = 64;
 const SYSCALL_EXIT: usize = 93;
 const SYSCALL_YIELD: usize = 124;
+const SYSCALL_GET_TIME: usize = 169;
 
 fn syscall(id: usize, args: [usize; 3]) -> isize {
     let mut ret: isize;
@@ -40,7 +41,14 @@ pub fn sys_exit(exit_code: i32) -> isize {
 // 功能: 主动放弃 CPU 时间片，让出执行权
 // 参数: 无参数
 // 返回值: 返回 0 表示成功
-// syscall ID: (假设是某个值，未明示)
+// syscall ID: 124
 pub fn sys_yield() -> isize {
     syscall(SYSCALL_YIELD, [0, 0, 0])
+}
+
+// 功能: 获取当前的时间,保存在TimeVal结构体ts中,_tz在我们的实现中忽略
+// 返回值: 返回是否执行成功,成功则返回0
+// syscall ID: 169
+pub fn sys_get_time() -> usize {
+    syscall(SYSCALL_GET_TIME, [0, 0, 0])
 }

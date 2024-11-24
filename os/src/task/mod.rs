@@ -30,8 +30,8 @@ mod task;
 /// `TaskManager` 实现了所有任务状态转换和任务上下切换的相关函数
 /// 在模块层可以找到一些结构体的包装函数.
 /// 
-///  `TaskManager` 中大部分功能通过 `inner` 字段进行隐藏,通过运行时延迟借用检查.
-///  `TaskManager` 内部的函数演示了如何使用 `inner` 字段.
+/// `TaskManager` 中大部分功能通过 `inner` 字段进行隐藏,通过运行时延迟借用检查.
+/// `TaskManager` 内部的函数演示了如何使用 `inner` 字段.
 pub struct TaskManager {
     /// 任务数量
     num_app: usize,
@@ -78,6 +78,7 @@ impl TaskManager {
     ///
     /// 通常任务列表的第一个任务是空闲任务(在后续版本中称为零进程)
     fn run_first_task(&self) -> ! {
+        // 获取任务管理结构体的使用权
         let mut inner = self.inner.exclusive_access();
         // 获取第一个任务的控制块
         let task0 = &mut inner.tasks[0];
@@ -123,10 +124,13 @@ impl TaskManager {
             if let Some(next) = self.find_next_task() {
                 let mut inner = self.inner.exclusive_access();
                 let current = inner.current_task;
+                // 切换到下一个任务
                 inner.tasks[next].task_status = TaskStatus::Running;
                 inner.current_task = next;
+                // 获取当前任务和下一个任务的任务上下文指针
                 let current_task_cx_ptr = &mut inner.tasks[current].task_cx as *mut TaskContext;
                 let next_task_cx_ptr = &inner.tasks[next].task_cx as *const TaskContext;
+                // 释放任务管理结构体使用权
                 drop(inner);
                 // 在此之前,应该手动释放所有必须释放的局部变量
                 unsafe {
